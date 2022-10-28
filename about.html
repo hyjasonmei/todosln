@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TODO科技-軟體解決方案專家</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="TODO科技-軟體解決方案專家" />
+    <meta
+      name="keywords"
+      content="todo, software, solution, IT, app, dashboard, e-commerce, mobile app"
+    />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="theme-color" content="white" />
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== undefined && mode === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    </script>
+
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+      id="google-font"
+    />
+    <!-- Vendor styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/aos/dist/aos.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+    <link rel="stylesheet" media="screen" href="styles.css" />
+  </head>
+  <!-- Body-->
+  <body>
+    <div id="myapp">
+      <!-- Page wrapper-->
+      <main class="page-wrapper">
+        <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+        <header class="navbar navbar-expand-lg fixed-top bg-light">
+          <div class="container">
+            <a
+              class="navbar-brand pe-sm-3"
+              href="index.html"
+              style="height: 50px"
+            >
+              <span class="text-primary flex-shrink-0 me-2">
+                <img src="logo.png" style="width: 45px" />
+              </span>
+              <div class="logo-text" style="line-height: 20px">
+                TODO科技
+                <br />
+
+                <small class="text-warning" style="font-size: 10px"
+                  >TODO Software Solutions</small
+                >
+              </div>
+            </a>
+            <div
+              class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto"
+              data-bs-toggle="mode"
+            >
+              <input class="form-check-input" type="checkbox" id="theme-mode" />
+              <label class="form-check-label" for="theme-mode"
+                ><i class="ai-sun fs-lg"></i
+              ></label>
+              <label class="form-check-label" for="theme-mode"
+                ><i class="ai-moon fs-lg"></i
+              ></label>
+            </div>
+            <a
+              class="btn btn-primary btn-sm rounded-pill fs-sm order-lg-3 d-none d-sm-inline-flex"
+              href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/"
+              target="_blank"
+              rel="noopener"
+              >聯繫我們
+            </a>
+            <button
+              class="navbar-toggler ms-sm-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+              <ul
+                class="navbar-nav navbar-nav-scroll me-auto"
+                style="--ar-scroll-height: 520px"
+              >
+                <li class="nav-item" v-for="i in routes" v-cloak>
+                  <a class="nav-link" :href="i.url"> {{ i.name }} </a>
+                </li>
+              </ul>
+              <div class="d-sm-none p-3 mt-n3">
+                <a
+                  class="btn btn-primary w-100 mb-1"
+                  href="contact.html"
+                  target="_blank"
+                  rel="noopener"
+                  >聯繫我們</a
+                >
+              </div>
+            </nav>
+          </div>
+        </header>
+        <div style="margin-top: 70px"></div>
+        <section
+          class="container pt-sm-2 pt-md-3 pt-lg-4 pt-xl-5 mt-xxl-4 pb-lg-2 pb-xl-4 pb-xxl-5"
+        >
+          <h2 class="h1 text-center pb-3 pb-lg-4">關於TODO科技</h2>
+          <div class="row d-flex justify-content-center">
+            <div class="col-11 col-sm-10 col-md-8" style="font-size: large">
+              <p>
+                TODO科技成立於2022，團隊成員均擁有十年以上世界級外商軟體工程師經歷，並經由微軟原廠技術認證肯定，因此我們能掌握各種領域軟體技能與知識。
+              </p>
+              <p>
+                然而，身為一間以"提出解決方案"為本位精神的軟體開發公司，我們並不會一昧地要求客戶導入最新、最熱門的技術而完全不考慮客戶的維運團隊的技能樹，導致交付後客戶端維護困難。
+              </p>
+              <p>
+                我們的做法是仔細評估客戶團隊的需求與團隊狀況，再端出量身打造的軟體解決方案，以符合最佳化的整體維護、營運成本。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="container pt-sm-2 pt-md-3 pt-lg-4 pt-xl-5 mt-xxl-4 pb-lg-2 pb-xl-4 pb-xxl-5"
+        >
+          <h2 class="h1 text-center pb-3 pb-lg-4">微軟原廠技術認證</h2>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-3">
+              <div class="card card-body text-center">
+                <img
+                  src="/mslogo/msca.png"
+                  class="m-auto"
+                  style="max-width: 150px"
+                />
+                <br />
+                <p class="h3">MCSA: Web Applications</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-body text-center">
+                <img
+                  src="/mslogo/az-204.png"
+                  class="m-auto"
+                  style="max-width: 150px"
+                />
+                <br />
+                <p class="h3">Microsoft Certified: Azure Developer Associate</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-body text-center">
+                <img
+                  src="/mslogo/az-400.png"
+                  class="m-auto"
+                  style="max-width: 150px"
+                />
+                <br />
+                <p class="h3">Microsoft Certified: DevOps Engineer Expert</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="container pt-sm-2 pt-md-3 pt-lg-4 pt-xl-5 mt-xxl-4 pb-lg-2 pb-xl-4 pb-xxl-5"
+        >
+          <h2 class="h1 text-center">創辦人Jason</h2>
+          <div class="text-center pb-3 pb-lg-4">
+            <p class="m-auto">大老闆 & 小老闆</p>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+              <div class="card card-body text-center">
+                <img
+                  src="/mslogo/msca.png"
+                  class="m-auto"
+                  style="max-width: 300px"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card card-body border-0" style="font-size: large">
+                <p>
+                  Jason:
+                  會有創業這個想法，是由於在外商工作期間，見證了無數失敗的廠商合作專案，其中失敗原因百百種。
+                </p>
+                <p>
+                  有可能是溝通不良，有可能是追加預算談不攏，有些是甲方的問題，有些是乙方的問題，但結果往往都造成許多人力與軟硬體成本的浪費。
+                </p>
+                <p>
+                  所以，我期許TODO科技的成立，能建立起更好的企業與廠商的合作模式，進而改善企業界軟體開發的亂象，<del>順便讓我賺點奶粉錢</del>。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <my-footer></my-footer>
+    </div>
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll>
+      <svg
+        viewBox="0 0 40 40"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="20"
+          cy="20"
+          r="19"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-miterlimit="10"
+        ></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
+    <!-- <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> -->
+    <script src="assets/vendor/aos/dist/aos.js"></script>
+    <script src="https://unpkg.com/vue@3.1.1"></script>
+    <!-- vue -->
+    <!-- <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/main.js"></script>
+    <!-- Main theme script-->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
