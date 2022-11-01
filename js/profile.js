@@ -11,5 +11,5 @@ const global_profile = {
   bank: "玉山銀行 (808) 林口分行",
   bankTitle: "土杜科技有限公司",
   bankNum: "--",
-  tax: "-- ",
+  tax: "90018797",
 };

@@ -27,6 +27,7 @@ var vm = Vue.createApp({
       profile: global_profile,
       routes: global_menu.routes,
       imports: global_service.imports,
+      cases: global_cases.cases,
     };
   },
   mounted() {
