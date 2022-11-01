@@ -40,8 +40,8 @@
           order-lg-3
           d-none d-sm-inline-flex
         "
-        href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/"
-        target="_blank"
+        href="contact.html"
+        target=""
         rel="noopener"
         >聯繫我們
       </a>
@@ -73,7 +73,6 @@
         </div>
       </nav>
     </div>
-    
   </header>
 </template>
 

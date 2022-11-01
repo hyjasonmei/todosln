@@ -48,7 +48,7 @@
                   >
                 </div>
               </a>
-              <p class="my-3">您的疑難雜症，就是我們的To Do List</p>
+              <p class="my-3">軟體解決方案專家</p>
             </div>
             <div
               class="
