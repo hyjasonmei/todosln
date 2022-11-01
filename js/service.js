@@ -1,4 +1,4 @@
-const data = {
+const global_service = {
   imports: [
     {
       name: "前端開發",

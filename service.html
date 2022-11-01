@@ -11,19 +11,7 @@
     />
     <!-- Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <meta name="theme-color" content="white" />
-    <!-- Theme mode-->
-    <script>
-      let mode = window.localStorage.getItem("mode"),
-        root = document.getElementsByTagName("html")[0];
-      if (mode !== undefined && mode === "dark") {
-        root.classList.add("dark-mode");
-      } else {
-        root.classList.remove("dark-mode");
-      }
-    </script>
-
     <!-- Import Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,103 +41,29 @@
       <!-- Page wrapper-->
       <main class="page-wrapper">
         <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
-        <header class="navbar navbar-expand-lg fixed-top bg-light">
-          <div class="container">
-            <a
-              class="navbar-brand pe-sm-3"
-              href="index.html"
-              style="height: 50px"
-            >
-              <span class="text-primary flex-shrink-0 me-2">
-                <img src="logo.png" style="width: 45px" />
-              </span>
-              <div class="logo-text" style="line-height: 20px">
-                TODO科技
-                <br />
-
-                <small class="text-warning" style="font-size: 10px"
-                  >TODO Software Solutions</small
-                >
-              </div>
-            </a>
-            <div
-              class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto"
-              data-bs-toggle="mode"
-            >
-              <input class="form-check-input" type="checkbox" id="theme-mode" />
-              <label class="form-check-label" for="theme-mode"
-                ><i class="ai-sun fs-lg"></i
-              ></label>
-              <label class="form-check-label" for="theme-mode"
-                ><i class="ai-moon fs-lg"></i
-              ></label>
-            </div>
-            <a
-              class="btn btn-primary btn-sm rounded-pill fs-sm order-lg-3 d-none d-sm-inline-flex"
-              href="https://themes.getbootstrap.com/product/around-multipurpose-template-ui-kit/"
-              target="_blank"
-              rel="noopener"
-              >聯繫我們
-            </a>
-            <button
-              class="navbar-toggler ms-sm-3"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarNav">
-              <ul
-                class="navbar-nav navbar-nav-scroll me-auto"
-                style="--ar-scroll-height: 520px"
-              >
-                <li class="nav-item" v-for="i in routes" v-cloak>
-                  <a class="nav-link" :href="i.url"> {{ i.name }} </a>
-                </li>
-              </ul>
-              <div class="d-sm-none p-3 mt-n3">
-                <a
-                  class="btn btn-primary w-100 mb-1"
-                  href="contact.html"
-                  target="_blank"
-                  rel="noopener"
-                  >聯繫我們</a
-                >
-              </div>
-            </nav>
-          </div>
-        </header>
-        <div style="margin-top: 70px;"></div>
+        <my-header></my-header>
+        <div style="margin-top: 70px"></div>
         <!-- services -->
         <my-services></my-services>
         <!-- main -->
-        <h2 class="h1 text-center pb-3 pb-lg-4">可導入技術</h2>
+        <h2 class="h1 text-center py-3 py-lg-4">我們可導入以下技術</h2>
         <section
           class="container pt-sm-2 pt-md-3 pt-lg-4 pt-xl-5 mt-xxl-4 pb-lg-2 pb-xl-4 pb-xxl-5"
         >
           <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
+            <div class="col-sm-6" v-for="i in imports">
+              <div class="card my-1">
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h3 class="card-title text-center">{{ i.name }}</h3>
+                  <div class="row my-3">
+                    <div class="col-3 text-center my-3" v-for="t in i.techs">
+                      <div style="height: 50px">
+                        <img :src="t.logo" style="max-height: 50px" />
+                      </div>
+
+                      <strong>{{ t.name }}</strong>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -187,8 +101,10 @@
     <!-- vue -->
     <!-- <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+    <script src="/js/init.js"></script>
     <script src="/js/profile.js"></script>
     <script src="/js/menu.js"></script>
+    <script src="/js/service.js"></script>
     <script src="/js/main.js"></script>
     <!-- Main theme script-->
     <script src="assets/js/theme.min.js"></script>

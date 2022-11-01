@@ -26,6 +26,7 @@ var vm = Vue.createApp({
     return {
       profile: global_profile,
       routes: global_menu.routes,
+      imports: global_service.imports,
     };
   },
   mounted() {
@@ -40,6 +41,9 @@ var vm = Vue.createApp({
     ),
     "my-services": Vue.defineAsyncComponent(() =>
       loadModule("./components/my-services.vue", options)
+    ),
+    "my-header": Vue.defineAsyncComponent(() =>
+      loadModule("./components/my-header.vue", options)
     ),
   },
   methods: {},
