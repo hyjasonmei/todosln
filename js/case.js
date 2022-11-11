@@ -20,7 +20,7 @@ const global_cases = {
       techs: ["Flutter", "iOS", "Android"],
     },
     {
-      name: "崑龍貨運派車管理系統",
+      name: "昆龍貨運派車管理系統",
       img: "/caselogo/kunglong-1.png",
       logo: "/caselogo/kunglong.png",
       techs: ["React", "NodeJs", "PostgreSQL", "Bootstrap"],
