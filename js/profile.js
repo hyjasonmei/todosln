@@ -10,6 +10,6 @@ const global_profile = {
   address: "新北市林口區文化二路一段266號B1-8",
   bank: "玉山銀行 (808) 林口分行",
   bankTitle: "土杜科技有限公司",
-  bankNum: "0886940039613",
+  bankNum: "0886940039809",
   tax: "90018797",
 };
