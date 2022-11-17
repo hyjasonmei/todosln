@@ -47,5 +47,19 @@ var vm = Vue.createApp({
       loadModule("./components/my-header.vue", options)
     ),
   },
-  methods: {},
+  methods: {
+    copy() {
+      // Get the text field
+      var copyText = `匯款銀行:${this.profile.bank}\n`;
+      copyText += `帳戶名稱:${this.profile.bankTitle}\n`;
+      copyText += `匯款帳號:${this.profile.bankNum}\n`;
+      copyText += `統一編號:${this.profile.tax}`;
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText);
+
+      // Alert the copied text
+      alert("已複製至剪貼簿");
+    },
+  },
 }).mount("#myapp");
